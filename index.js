@@ -71,7 +71,7 @@ async function run() {
 
       try {
         const result = await noticeCollection.insertOne(newNotice);
-        res.status(201).send({ message: 'Notice created', noticeId: result.insertedId });
+        res.status(201).send({ message: 'Notice created', insertedId: result.insertedId });
       } catch (error) {
         console.error('Failed to create notice', error);
         res.status(500).send({ message: 'Failed to create notice.' });
